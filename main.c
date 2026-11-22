@@ -1,16 +1,17 @@
 #include <stdio.h>
 
+//  出力を生成
 void generate(int *input, int *num)
 {
-    int cnt = *input, r = 0;
+    int cnt = *input, result = 0;
 
     while (cnt > 0)
     {
-        r = (r << 1) | (cnt & 1);
+        result = (result << 1) | (cnt & 1);
         cnt >>= 1;
     }
 
-    *num = r;
+    *num = result;
 }
 
 int main(void)
